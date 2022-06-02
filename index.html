@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <style>
+        div {
+            width: 300px;
+            height: 100px;
+            background-color: #D94A38;
+            display: inline-block;
+            text-align: center;
+            padding: 50px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 id="heading">JS EX</h2>
+    <h3 id="ex1">EX 1</h3><a id="a1" name="EX1.1" />
+    <p>Change the following image to a grape whose width is 300.</p>
+    <img id="img1" src="apple.png" width="200">
+
+    <h3 id="ex2">Exercise 1.2</h3>
+    <p>Go to <a href="#EX1.1">Exercise 1.1</a>.<br />
+        The name of anchor "a1" is: <span id="sp1"></span></p>
+
+    <button onclick="exercise2_1()">Exercise 2.1</button>
+    <button onclick="exercise2_2()">Exercise 2.2</button>
+    <br><br>
+    <div onmousedown="mouseDown(this)" onmouseup="mouseUp(this)">
+        Press Here
+    </div>
+    <script>
+        function exercise2_1() {
+            document.getElementById("heading").innerHTML = "JavaScript Exercise 1";
+            document.getElementById("ex1").innerHTML = "Exercise 1.1";
+            var img1 = document.getElementById("img1");
+            img1.src = "banana.png";
+            img1.width = 300;
+        }
+
+        function exercise2_2() {
+            document.getElementById("sp1").innerHTML = document.getElementById("a1").name;
+            var ex2 = document.getElementById("ex2");
+            ex2.style.color = "red";
+            ex2.style.fontStyle = "italic";
+        }
+
+        function mouseDown(elem) {
+            elem.style.backgroundColor = "#1ec5e5";
+            elem.innerHTML = "Release mouse";
+        }
+
+        function mouseUp(elem) {
+            elem.style.backgroundColor = "#d94a38";
+            elem.innerHTML = "Press here";
+        }
+    </script>
+</body>
+
+</html>
